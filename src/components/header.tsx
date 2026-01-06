@@ -30,7 +30,7 @@ export function Header() {
           <Tooltip>
             <TooltipTrigger>
               <Link
-                href='https://github.com/atuandev'
+                href='https://github.com/sudeep2704'
                 target='_blank'
                 rel='noreferrer noopener'
                 aria-label='GitHub'
@@ -39,7 +39,7 @@ export function Header() {
               </Link>
             </TooltipTrigger>
             <TooltipContent sideOffset={10}>
-              <p>@atuandev</p>
+              <p>@sudeep2704</p>
             </TooltipContent>
           </Tooltip>
         </div>
