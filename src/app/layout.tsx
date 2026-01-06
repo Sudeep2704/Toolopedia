@@ -28,7 +28,7 @@ const BASE_URL =
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'Tools Online',
+    default: 'Toolopedia',
     template: `%s | ${SITE_TITLE}`
   },
   description: SITE_DESCRIPTION,
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
       'max-snippet': -1
     }
   },
-  manifest: '/favicon/site.webmanifest',
+  manifest: '',
   alternates: {
     canonical: BASE_URL
   },
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     'tools for designers',
     'tools for marketers'
   ],
-  creator: 'atuandev',
+  creator: 'Sudeep',
   openGraph: {
     url: BASE_URL,
     type: 'website',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     locale: 'vn_VN',
     images:
-      'https://raw.githubusercontent.com/atuandev/tools/master/public/preview/home-preview.png'
+      ''
   },
   icons: {
     icon: '/favicon/favicon.ico',
