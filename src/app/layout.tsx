@@ -19,8 +19,14 @@ type RootLayoutProps = {
   children: React.ReactNode
 }
 
+/* ✅ SAFE BASE URL */
+const BASE_URL =
+  SITE_URL && SITE_URL.startsWith('http')
+    ? SITE_URL
+    : 'http://localhost:3000'
+
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL as string),
+  metadataBase: new URL(BASE_URL),
   title: {
     default: 'Tools Online',
     template: `%s | ${SITE_TITLE}`
@@ -39,7 +45,7 @@ export const metadata: Metadata = {
   },
   manifest: '/favicon/site.webmanifest',
   alternates: {
-    canonical: SITE_URL
+    canonical: BASE_URL
   },
   keywords: [
     'tools',
@@ -51,13 +57,14 @@ export const metadata: Metadata = {
   ],
   creator: 'atuandev',
   openGraph: {
-    url: SITE_URL,
+    url: BASE_URL,
     type: 'website',
     title: SITE_TITLE,
     siteName: SITE_TITLE,
     description: SITE_DESCRIPTION,
     locale: 'vn_VN',
-    images: 'https://raw.githubusercontent.com/atuandev/tools/master/public/preview/home-preview.png'
+    images:
+      'https://raw.githubusercontent.com/atuandev/tools/master/public/preview/home-preview.png'
   },
   icons: {
     icon: '/favicon/favicon.ico',
