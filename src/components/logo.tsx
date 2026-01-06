@@ -11,7 +11,7 @@ const pacifico = Pacifico({
 export function Logo() {
   return (
     <div className={cn(pacifico.className, 'tracking-wider text-xl')}>
-      atuandev
+      Toolopedia
     </div>
   )
 }
