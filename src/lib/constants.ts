@@ -12,10 +12,12 @@ import {
 } from 'lucide-react'
 import { ListTools, QRCodeOption } from '@/lib/types'
 
+/* ✅ SAFE SITE URL */
 export const SITE_URL =
-  process.env.NODE_ENV === 'production'
-    ? process.env.NEXT_PUBLIC_LOCAL_URL
-    : process.env.NEXT_PUBLIC_URL
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.NODE_ENV === 'production'
+    ? 'https://your-production-domain.com'
+    : 'http://localhost:3000')
 
 export const SITE_NAME = 'Tools Online'
 export const SITE_TITLE = 'Tools Online'
@@ -88,28 +90,10 @@ export const LIST_TOOLS: ListTools[] = [
 ]
 
 export const LIST_QR_CODE_OPTIONS: QRCodeOption[] = [
-  {
-    label: 'URL',
-    icon: LinkIcon
-  },
-  {
-    label: 'Text',
-    icon: TextIcon
-  },
-  {
-    label: 'Email',
-    icon: MailIcon
-  },
-  {
-    label: 'SMS',
-    icon: MessageSquareTextIcon
-  },
-  {
-    label: 'Wifi',
-    icon: WifiIcon
-  },
-  {
-    label: 'Image',
-    icon: ImageIcon
-  }
+  { label: 'URL', icon: LinkIcon },
+  { label: 'Text', icon: TextIcon },
+  { label: 'Email', icon: MailIcon },
+  { label: 'SMS', icon: MessageSquareTextIcon },
+  { label: 'Wifi', icon: WifiIcon },
+  { label: 'Image', icon: ImageIcon }
 ]
